@@ -1,36 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Todo application demo project</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <main class="app">
-      <h1 class="title">Todo</h1>
 
-      <form id="todo-form" class="new-todo-form" autocomplete="off">
-        <input id="new-todo" class="new-todo-input" placeholder="What needs doing?" />
-        <button class="add-btn" type="submit">Add</button>
-      </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Modern Login Page | AsmrProg</title>
+</head>
 
-      <section class="controls">
-        <div class="filters">
-          <button data-filter="all" class="filter active">All</button>
-          <button data-filter="active" class="filter">Active</button>
-          <button data-filter="completed" class="filter">Completed</button>
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="./">
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registeration</span>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Sign Up</button>
+            </form>
         </div>
-        <button id="clear-completed" class="clear-btn">Clear completed</button>
-      </section>
+        <div class="form-container sign-in">
+            <form action="./">
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email password</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#">Forget Your Password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-      <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+    <script src="app.js"></script>
+</body>
 
-      <footer class="footer">
-        <span id="count" class="count">0 items left</span>
-      </footer>
-    </main>
-
-    <script src="app.js" defer></script>
-  </body>
 </html>
